@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		spinner.style.display = 'block'; //show spinner
 		
 		// Fetch the existing record from the database
-		fetch(`https://hmrvhhu9r0.execute-api.us-east-2.amazonaws.com/getRecord?inspection_number=${inspection_number}&email=${encodeURIComponent(email)}`)
+		fetch(`https://ckmzl9qyfj.execute-api.us-east-1.amazonaws.com/getRecord?inspection_number=${inspection_number}&email=${encodeURIComponent(email)}`)
 			.then(response => {
 				if (response.status === 404) {
 					// Handle 404 specifically
@@ -87,35 +87,85 @@ document.addEventListener('DOMContentLoaded', function() {
 				if (data) {
 					// Populate the form fields with the fetched data
 					document.getElementById('operator').value = data.operator;
-					document.getElementById('technician').value = data.technician;
+					document.getElementById('trailer_id').value = data.trailer_id;
 					document.getElementById('email').value = data.email;
 					document.getElementById('troop').value = data.troop;
-					document.getElementById('engine_make').value = data.engine_make;
-					document.getElementById('engine_model').value = data.engine_model;
-					document.getElementById('engine_year').value = data.engine_year;	
-					document.getElementById('inspection_number').value = data.inspection_number;
-					document.getElementById('dmv349_report_number').value = data.dmv349_report_number;	
-					document.getElementById('post_crash_trailer_used').value = data.post_crash_trailer_used;	
-					document.getElementById('warrant').value = data.warrant;	
-					document.getElementById('unit_type').value = data.unit_type;	
-					document.getElementById('notes').value = data.notes;	
-					document.getElementById('download_type').value = data.download_type;	
-					document.getElementById('district').value = data.district;
-					document.getElementById('date').value = data.date;
-					document.getElementById('time').value = data.time;
-
-
-					const equipment = data.equipment; // Assume this is an array
-					const equipmentSelect = document.getElementById('equipment_used');
-					Array.from(equipmentSelect.options).forEach(option => {
-						option.selected = equipment.includes(option.value);
-					});
-
-					const software = data.software; // Assume this is an array
-					const softwareSelect = document.getElementById('software_used');
-					Array.from(softwareSelect.options).forEach(option => {
-						option.selected = software.includes(option.value);
-					});
+					document.getElementById('rolling_tool_cabinet').value = data.rolling_tool_cabinet;
+					document.getElementById('rolling_tool_cabinet_notes').value = data.rolling_tool_cabinet_notes;
+					document.getElementById('stationary_air_compressor').value = data.stationary_air_compressor;	
+					document.getElementById('stationary_air_compressor_notes').value = data.stationary_air_compressor_notes;
+					document.getElementById('filter_regulator').value = data.filter_regulator;	
+					document.getElementById('filter_regulator_notes').value = data.filter_regulator_notes;	
+					document.getElementById('rand_impact_wrench_d_handle').value = data.rand_impact_wrench_d_handle;	
+					document.getElementById('rand_impact_wrench_d_handle_notes').value = data.rand_impact_wrench_d_handle_notes;	
+					document.getElementById('truck_axle_jack').value = data.truck_axle_jack;	
+					document.getElementById('truck_axle_jack_notes').value = data.truck_axle_jack_notes;	
+					document.getElementById('item_2_jack_stands').value = data.item_2_jack_stands;
+					document.getElementById('item_2_jack_stands_notes').value = data.item_2_jack_stands_notes;
+					document.getElementById('spring_return_hose_reel').value = data.spring_return_hose_reel;
+					document.getElementById('spring_return_hose_reel_notes').value = data.spring_return_hose_reel_notes;
+					document.getElementById('budd_wheel_socket_set').value = data.budd_wheel_socket_set;
+					document.getElementById('budd_wheel_socket_set_notes').value = data.budd_wheel_socket_set_notes;
+					document.getElementById('rand_impact_wrench').value = data.rand_impact_wrench;
+					document.getElementById('rand_impact_wrench_notes').value = data.rand_impact_wrench_notes;
+					document.getElementById('reciprocating_saw').value = data.reciprocating_saw;
+					document.getElementById('reciprocating_saw_notes').value = data.reciprocating_saw_notes;
+					document.getElementById('screw_extractor_set').value = data.screw_extractor_set;
+					document.getElementById('screw_extractor_set_notes').value = data.screw_extractor_set_notes;
+					document.getElementById('battery_jump_starter').value = data.battery_jump_starter;
+					document.getElementById('battery_jump_starter_notes').value = data.battery_jump_starter_notes;
+					document.getElementById('job_site_light').value = data.job_site_light;
+					document.getElementById('job_site_light_notes').value = data.job_site_light_notes;
+					document.getElementById('shelving').value = data.shelving;
+					document.getElementById('shelving_notes').value = data.shelving_notes;
+					document.getElementById('aw_direct_quick_connect').value = data.aw_direct_quick_connect;
+					document.getElementById('aw_direct_quick_connect_notes').value = data.aw_direct_quick_connect_notes;
+					document.getElementById('dewalt_20v_max_xr_compact_reciprocating_saw').value = data.dewalt_20v_max_xr_compact_reciprocating_saw;
+					document.getElementById('dewalt_20v_max_xr_compact_reciprocating_saw_notes').value = data.dewalt_20v_max_xr_compact_reciprocating_saw_notes;
+					document.getElementById('magic_creeper').value = data.magic_creeper;
+					document.getElementById('magic_creeper_notes').value = data.magic_creeper_notes;
+					document.getElementById('mechanic_tool_set').value = data.mechanic_tool_set;
+					document.getElementById('mechanic_tool_set_notes').value = data.mechanic_tool_set_notes;
+					document.getElementById('black_hard_airline_connected_to_trailer').value = data.black_hard_airline_connected_to_trailer;
+					document.getElementById('black_hard_airline_connected_to_trailer_notes').value = data.black_hard_airline_connected_to_trailer_notes;
+					document.getElementById('mfg_5_g_gas_can').value = data.mfg_5_g_gas_can;
+					document.getElementById('mfg_5_g_gas_can_notes').value = data.mfg_5_g_gas_can_notes;
+					document.getElementById('portable_workbench').value = data.portable_workbench;
+					document.getElementById('portable_workbench_notes').value = data.portable_workbench_notes;
+					document.getElementById('extendable_pry_bar').value = data.extendable_pry_bar;
+					document.getElementById('extendable_pry_bar_notes').value = data.extendable_pry_bar_notes;
+					document.getElementById('item_2_securement_straps').value = data.item_2_securement_straps;
+					document.getElementById('item_2_securement_straps_notes').value = data.item_2_securement_straps_notes;
+					document.getElementById('item_2_rubber_air_hose_3_8in_x_25ft').value = data.item_2_rubber_air_hose_3_8in_x_25ft;
+					document.getElementById('item_2_rubber_air_hose_3_8in_x_25ft_notes').value = data.item_2_rubber_air_hose_3_8in_x_25ft_notes;
+					document.getElementById('air_system_inflator').value = data.air_system_inflator;
+					document.getElementById('air_system_inflator_notes').value = data.air_system_inflator_notes;
+					document.getElementById('air_pressure_guage_w_silver_male_air_fitting').value = data.air_pressure_guage_w_silver_male_air_fitting;
+					document.getElementById('air_pressure_guage_w_silver_male_air_fitting_notes').value = data.air_pressure_guage_w_silver_male_air_fitting_notes;
+					document.getElementById('air_pressure_regulator_valve_w_silver_male_air_fitting').value = data.air_pressure_regulator_valve_w_silver_male_air_fitting;
+					document.getElementById('air_pressure_regulator_valve_w_silver_male_air_fitting_notes').value = data.air_pressure_regulator_valve_w_silver_male_air_fitting_notes;
+					document.getElementById('item_3_way_quick_coupling_manifold_w_a_blue_male_fitting').value = data.item_3_way_quick_coupling_manifold_w_a_blue_male_fitting;
+					document.getElementById('item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes').value = data.item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes;
+					document.getElementById('item_2_glad_hands_w_adapter').value = data.item_2_glad_hands_w_adapter;
+					document.getElementById('item_2_glad_hands_w_adapter_notes').value = data.item_2_glad_hands_w_adapter_notes;
+					document.getElementById('item_4_blue_air_fittings_2_male_2_female').value = data.item_4_blue_air_fittings_2_male_2_female;
+					document.getElementById('item_4_blue_air_fittings_2_male_2_female_notes').value = data.item_4_blue_air_fittings_2_male_2_female_notes;
+					document.getElementById('item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting').value = data.item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting;
+					document.getElementById('item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting_notes').value = data.item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting_notes;
+					document.getElementById('milton_5_in_one_universal_quick_connect').value = data.milton_5_in_one_universal_quick_connect;
+					document.getElementById('milton_5_in_one_universal_quick_connect_notes').value = data.milton_5_in_one_universal_quick_connect_notes;
+					document.getElementById('item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4').value = data.item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4;
+					document.getElementById('item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4_notes').value = data.item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4_notes;
+					document.getElementById('pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting').value = data.pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting;
+					document.getElementById('pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting_notes').value = data.pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting_notes;
+					document.getElementById('beduan_push_to_connect_fitting').value = data.beduan_push_to_connect_fitting;
+					document.getElementById('beduan_push_to_connect_fitting_notes').value = data.beduan_push_to_connect_fitting_notes;
+					document.getElementById('uxcell_push_to_connect_fittings').value = data.uxcell_push_to_connect_fittings;
+					document.getElementById('uxcell_push_to_connect_fittings_notes').value = data.uxcell_push_to_connect_fittings_notes;
+					document.getElementById('beduan_push_to_connect_fitting_2').value = data.beduan_push_to_connect_fitting_2;
+					document.getElementById('beduan_push_to_connect_fitting_2_notes').value = data.beduan_push_to_connect_fitting_2_notes;
+					document.getElementById('item_3_way_quick_coupling_manifold_w_a_blue_male_fitting').value = data.item_3_way_quick_coupling_manifold_w_a_blue_male_fitting;
+					document.getElementById('item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes').value = data.item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes;
 
 					//console.log('other_violations:', data.other_violations);
 					
@@ -135,24 +185,155 @@ document.addEventListener('DOMContentLoaded', function() {
 		event.preventDefault();
 		
 		const operator = document.getElementById('operator').value;
-		const technician = document.getElementById('technician').value;
+		const trailer_id = document.getElementById('trailer_id').value;
 		const email = document.getElementById('email').value;
 		const troop = document.getElementById('troop').value;
-		const district = document.getElementById('district').value;
-		const date = document.getElementById('date').value;
-		const time = document.getElementById('time').value;
-		const inspection_number = document.getElementById('inspection_number').value;
-		const dmv349_report_number = document.getElementById('dmv349_report_number').value;
-		const equipment = Array.from(document.getElementById('equipment_used').selectedOptions).map(opt => opt.value);
-		const software = Array.from(document.getElementById('software_used').selectedOptions).map(opt => opt.value);
-		const warrant = document.getElementById('warrant').value;
-		const unit_type = document.getElementById('unit_type').value;
-		const download_type = document.getElementById('download_type').value;
-		const notes = document.getElementById('notes').value;
-		const post_crash_trailer_used = document.getElementById('post_crash_trailer_used').value;
-		const engine_make = document.getElementById('engine_make').value;
-		const engine_model = document.getElementById('engine_model').value;
-		const engine_year = document.getElementById('engine_year').value;
+
+		// helper for radio groups (yes/no boxes)
+		const getRadioValue = (name) =>
+		document.querySelector(`input[name="${name}"]:checked`)?.value || null;
+
+		// ----- tools -----
+		const rolling_tool_cabinet = getRadioValue('rolling_tool_cabinet');
+		const rolling_tool_cabinet_notes = document.getElementById('rolling_tool_cabinet_notes').value;
+
+		const stationary_air_compressor = getRadioValue('stationary_air_compressor');
+		const stationary_air_compressor_notes = document.getElementById('stationary_air_compressor_notes').value;
+
+		const filter_regulator = getRadioValue('filter_regulator');
+		const filter_regulator_notes = document.getElementById('filter_regulator_notes').value;
+
+		const rand_impact_wrench_d_handle = getRadioValue('rand_impact_wrench_d_handle');
+		const rand_impact_wrench_d_handle_notes = document.getElementById('rand_impact_wrench_d_handle_notes').value;
+
+		const truck_axle_jack = getRadioValue('truck_axle_jack');
+		const truck_axle_jack_notes = document.getElementById('truck_axle_jack_notes').value;
+
+		const item_2_jack_stands = getRadioValue('item_2_jack_stands');
+		const item_2_jack_stands_notes = document.getElementById('item_2_jack_stands_notes').value;
+
+		const spring_return_hose_reel = getRadioValue('spring_return_hose_reel');
+		const spring_return_hose_reel_notes = document.getElementById('spring_return_hose_reel_notes').value;
+
+		const budd_wheel_socket_set = getRadioValue('budd_wheel_socket_set');
+		const budd_wheel_socket_set_notes = document.getElementById('budd_wheel_socket_set_notes').value;
+
+		const rand_impact_wrench = getRadioValue('rand_impact_wrench');
+		const rand_impact_wrench_notes = document.getElementById('rand_impact_wrench_notes').value;
+
+		const reciprocating_saw = getRadioValue('reciprocating_saw');
+		const reciprocating_saw_notes = document.getElementById('reciprocating_saw_notes').value;
+
+		const screw_extractor_set = getRadioValue('screw_extractor_set');
+		const screw_extractor_set_notes = document.getElementById('screw_extractor_set_notes').value;
+
+		const battery_jump_starter = getRadioValue('battery_jump_starter');
+		const battery_jump_starter_notes = document.getElementById('battery_jump_starter_notes').value;
+
+		const job_site_light = getRadioValue('job_site_light');
+		const job_site_light_notes = document.getElementById('job_site_light_notes').value;
+
+		const shelving = getRadioValue('shelving');
+		const shelving_notes = document.getElementById('shelving_notes').value;
+
+		const aw_direct_quick_connect = getRadioValue('aw_direct_quick_connect');
+		const aw_direct_quick_connect_notes = document.getElementById('aw_direct_quick_connect_notes').value;
+
+		const dewalt_20v_max_xr_compact_reciprocating_saw =
+		getRadioValue('dewalt_20v_max_xr_compact_reciprocating_saw');
+		const dewalt_20v_max_xr_compact_reciprocating_saw_notes =
+		document.getElementById('dewalt_20v_max_xr_compact_reciprocating_saw_notes').value;
+
+		const magic_creeper = getRadioValue('magic_creeper');
+		const magic_creeper_notes = document.getElementById('magic_creeper_notes').value;
+
+		const mechanic_tool_set = getRadioValue('mechanic_tool_set');
+		const mechanic_tool_set_notes = document.getElementById('mechanic_tool_set_notes').value;
+
+		const black_hard_airline_connected_to_trailer =
+		getRadioValue('black_hard_airline_connected_to_trailer');
+		const black_hard_airline_connected_to_trailer_notes =
+		document.getElementById('black_hard_airline_connected_to_trailer_notes').value;
+
+		const mfg_5_g_gas_can = getRadioValue('mfg_5_g_gas_can');
+		const mfg_5_g_gas_can_notes = document.getElementById('mfg_5_g_gas_can_notes').value;
+
+		const portable_workbench = getRadioValue('portable_workbench');
+		const portable_workbench_notes = document.getElementById('portable_workbench_notes').value;
+
+		const extendable_pry_bar = getRadioValue('extendable_pry_bar');
+		const extendable_pry_bar_notes = document.getElementById('extendable_pry_bar_notes').value;
+
+		const item_2_securement_straps = getRadioValue('item_2_securement_straps');
+		const item_2_securement_straps_notes =
+		document.getElementById('item_2_securement_straps_notes').value;
+
+		const item_2_rubber_air_hose_3_8in_x_25ft =
+		getRadioValue('item_2_rubber_air_hose_3_8in_x_25ft');
+		const item_2_rubber_air_hose_3_8in_x_25ft_notes =
+		document.getElementById('item_2_rubber_air_hose_3_8in_x_25ft_notes').value;
+
+		const air_system_inflator = getRadioValue('air_system_inflator');
+		const air_system_inflator_notes = document.getElementById('air_system_inflator_notes').value;
+
+		const air_pressure_guage_w_silver_male_air_fitting =
+		getRadioValue('air_pressure_guage_w_silver_male_air_fitting');
+		const air_pressure_guage_w_silver_male_air_fitting_notes =
+		document.getElementById('air_pressure_guage_w_silver_male_air_fitting_notes').value;
+
+		const air_pressure_regulator_valve_w_silver_male_air_fitting =
+		getRadioValue('air_pressure_regulator_valve_w_silver_male_air_fitting');
+		const air_pressure_regulator_valve_w_silver_male_air_fitting_notes =
+		document.getElementById('air_pressure_regulator_valve_w_silver_male_air_fitting_notes').value;
+
+		const item_3_way_quick_coupling_manifold_w_a_blue_male_fitting =
+		getRadioValue('item_3_way_quick_coupling_manifold_w_a_blue_male_fitting');
+		const item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes =
+		document.getElementById('item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes').value;
+
+		const item_2_glad_hands_w_adapter = getRadioValue('item_2_glad_hands_w_adapter');
+		const item_2_glad_hands_w_adapter_notes =
+		document.getElementById('item_2_glad_hands_w_adapter_notes').value;
+
+		const item_4_blue_air_fittings_2_male_2_female =
+		getRadioValue('item_4_blue_air_fittings_2_male_2_female');
+		const item_4_blue_air_fittings_2_male_2_female_notes =
+		document.getElementById('item_4_blue_air_fittings_2_male_2_female_notes').value;
+
+		const item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting =
+		getRadioValue('item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting');
+		const item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting_notes =
+		document.getElementById('item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting_notes').value;
+
+		const milton_5_in_one_universal_quick_connect =
+		getRadioValue('milton_5_in_one_universal_quick_connect');
+		const milton_5_in_one_universal_quick_connect_notes =
+		document.getElementById('milton_5_in_one_universal_quick_connect_notes').value;
+
+		const item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4 =
+		getRadioValue('item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4');
+		const item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4_notes =
+		document.getElementById('item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4_notes').value;
+
+		const pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting =
+		getRadioValue('pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting');
+		const pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting_notes =
+		document.getElementById('pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting_notes').value;
+
+		const beduan_push_to_connect_fitting = getRadioValue('beduan_push_to_connect_fitting');
+		const beduan_push_to_connect_fitting_notes =
+		document.getElementById('beduan_push_to_connect_fitting_notes').value;
+
+		const uxcell_push_to_connect_fittings = getRadioValue('uxcell_push_to_connect_fittings');
+		const uxcell_push_to_connect_fittings_notes =
+		document.getElementById('uxcell_push_to_connect_fittings_notes').value;
+
+		const beduan_push_to_connect_fitting_2 =
+		getRadioValue('beduan_push_to_connect_fitting_2');
+		const beduan_push_to_connect_fitting_2_notes =
+		document.getElementById('beduan_push_to_connect_fitting_2_notes').value;
+
+
 
 
 
@@ -176,11 +357,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		 	return; // Exit if validation fails
 		 }
 
-		 // Validate dmv number
-		 //if (!/^\d{7}[A-Z]{2}$/.test(dmv349_report_number)) {
-		 	//alert('The DMV Report Number must be formatted properly.')
-		 	//return; // Exit if validation fails
-		 //}
 		
 		// Prepare the form data for submission 250428010CA
 		const formData = {
@@ -208,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		spinner.style.display = 'block'; //show spinner
 		
 		// Post the record to the database
-		fetch('https://hmrvhhu9r0.execute-api.us-east-2.amazonaws.com/postRecord', {
+		fetch('https://ckmzl9qyfj.execute-api.us-east-1.amazonaws.com/postRecord', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(formData)
@@ -241,5 +417,4 @@ document.addEventListener('DOMContentLoaded', function() {
 window.onload = function() {
 	const today = new Date();
 	document.getElementById('date').value = today.toISOString().split('T')[0];
-	document.getElementById('time').value = today.toTimeString().split(' ')[0].slice(0, 5);
 };
