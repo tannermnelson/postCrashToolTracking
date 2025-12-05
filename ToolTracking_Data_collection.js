@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		const beduan_push_to_connect_fitting_2_notes =
 		document.getElementById('beduan_push_to_connect_fitting_2_notes').value;
 
-
+		const notes = document.getElementById('notes').value;
 
 
 
