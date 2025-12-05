@@ -1,19 +1,3 @@
-function handleDownloadTypeChange() {
-     let downloadType = document.getElementById("download_type").value;
-     let inspectionInput = document.getElementById("inspection_number");
- 
-     if (downloadType === "Training Download") {
-         let randomNumber = Math.floor(1000000 + Math.random() * 9000000);
-         inspectionInput.value = randomNumber;
-         inspectionInput.readOnly = true;
-     } else {
-         inspectionInput.value = "";
-         inspectionInput.readOnly = false;
-     }
- }
- 
-
-
 document.addEventListener('DOMContentLoaded', function() {
 
 	const updateSection = document.getElementById('updateRecord');
@@ -187,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		const operator = document.getElementById('operator').value;
 		const trailer_id = document.getElementById('trailer_id').value;
 		const email = document.getElementById('email').value;
-		const troop = document.getElementById('troop').value;
 
 		// helper for radio groups (yes/no boxes)
 		const getRadioValue = (name) =>
