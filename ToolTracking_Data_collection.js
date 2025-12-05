@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	const updateSection = document.getElementById('updateRecord');
-    updateSection.style.display = 'none';
+
 
 	//Create and add spinner to the page
     const spinner = document.createElement('div');
