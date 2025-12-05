@@ -339,10 +339,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 		//Validate the form fields
-		if (!operator || !technician || !email || !troop || !date || !time || !district || !inspection_number || !equipment || !software || !engine_make || !engine_model || !engine_year || !warrant || !unit_type || !download_type  || !post_crash_trailer_used) {
-			alert('Please fill in all required fields.');
-		 	return; // Exit if any field is empty
-		 }
+		if (
+		!operator ||
+		!trailer_id ||
+		!email ||
+		!rolling_tool_cabinet ||
+		!stationary_air_compressor ||
+		!filter_regulator ||
+		!rand_impact_wrench_d_handle ||
+		!truck_axle_jack ||
+		!item_2_jack_stands ||
+		!spring_return_hose_reel ||
+		!budd_wheel_socket_set ||
+		!rand_impact_wrench ||
+		!reciprocating_saw ||
+		!screw_extractor_set ||
+		!battery_jump_starter ||
+		!job_site_light ||
+		!shelving ||
+		!aw_direct_quick_connect ||
+		!dewalt_20v_max_xr_compact_reciprocating_saw ||
+		!magic_creeper ||
+		!mechanic_tool_set ||
+		!black_hard_airline_connected_to_trailer ||
+		!mfg_5_g_gas_can ||
+		!portable_workbench ||
+		!extendable_pry_bar ||
+		!item_2_securement_straps ||
+		!item_2_rubber_air_hose_3_8in_x_25ft ||
+		!air_system_inflator ||
+		!air_pressure_guage_w_silver_male_air_fitting ||
+		!air_pressure_regulator_valve_w_silver_male_air_fitting ||
+		!item_3_way_quick_coupling_manifold_w_a_blue_male_fitting ||
+		!item_2_glad_hands_w_adapter ||
+		!item_4_blue_air_fittings_2_male_2_female ||
+		!item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting ||
+		!milton_5_in_one_universal_quick_connect ||
+		!item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4 ||
+		!pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting ||
+		!beduan_push_to_connect_fitting ||
+		!uxcell_push_to_connect_fittings ||
+		!beduan_push_to_connect_fitting_2
+		) {
+		alert('Please fill in all required fields.');
+		return; // Exit if any field is empty
+		}
+
 
 		// Validate email format with Regular Expression (Regex)
 		 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
