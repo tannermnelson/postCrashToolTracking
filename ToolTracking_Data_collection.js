@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		operator,
 		trailer_id,
 		email,
+		date,
 		rolling_tool_cabinet,
 		rolling_tool_cabinet_notes,
 		stationary_air_compressor,
