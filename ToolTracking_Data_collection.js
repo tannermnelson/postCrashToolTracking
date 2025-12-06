@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		const operator = document.getElementById('operator').value;
 		const trailer_id = document.getElementById('trailer_id').value;
 		const email = document.getElementById('email').value;
-
+		const date = document.getElementById('date').value;
 		// helper for radio groups (yes/no boxes)
 		const getRadioValue = (name) =>
 		document.querySelector(`input[name="${name}"]:checked`)?.value || null;
