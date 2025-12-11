@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		searchResultLimit: 9999
 	});
 
+
+	trooperChoices.enable();
+	
 	//Create and add spinner to the page
     const spinner = document.createElement('div');
     spinner.id = 'spinner';
