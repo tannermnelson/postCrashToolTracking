@@ -48,16 +48,14 @@
             </select>
 
             <label for="operator">Operator</label>
-            <select id="operator" name="operator">
+            <select id="operator" name="operator" class="choices" required>
                 <option value="">Select an Operator</option>
-                <option value="Tpr. Smith">Tpr. Smith</option>
-                <option value="Tpr. Johnson">Tpr. Johnson</option>
-                <option value="Tpr. Williams">Tpr. Williams</option>
             </select>
             
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="Enter Email for Notification">
-            
+            <select id="email" name="email" class="readonly-field" disabled required>
+                <option value="">Select Trooper Email for Notification</option>
+            </select>
 
             <label for="date">Date</label>
             <input type="date" id="date" name="date">
@@ -67,7 +65,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="rolling_tool_cabinet" value="yes">
+                <input type="radio" name="rolling_tool_cabinet" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -89,7 +87,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="stationary_air_compressor" value="yes">
+                <input type="radio" name="stationary_air_compressor" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -111,7 +109,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="filter_regulator" value="yes">
+                <input type="radio" name="filter_regulator" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -133,7 +131,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="rand_impact_wrench_d_handle" value="yes">
+                <input type="radio" name="rand_impact_wrench_d_handle" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -155,7 +153,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="truck_axle_jack" value="yes">
+                <input type="radio" name="truck_axle_jack" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -175,21 +173,32 @@
             <div class="check-item">
             <div class="item-name">2 Jack Stands</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="item_2_jack_stands" value="yes">
+                <input type="radio" name="item_2_jack_stands" value="2" checked>
                 <span class="box"></span>
-                Yes
+                2
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="item_2_jack_stands" value="no">
+                <input type="radio" name="item_2_jack_stands" value="1">
                 <span class="box"></span>
-                No
+                1
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="item_2_jack_stands" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="item_2_jack_stands_notes" placeholder="Notes..." class="notes-box">
             </div>
@@ -199,7 +208,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="spring_return_hose_reel" value="yes">
+                <input type="radio" name="spring_return_hose_reel" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -221,7 +230,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="budd_wheel_socket_set" value="yes">
+                <input type="radio" name="budd_wheel_socket_set" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -243,7 +252,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="rand_impact_wrench" value="yes">
+                <input type="radio" name="rand_impact_wrench" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -265,7 +274,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="reciprocating_saw" value="yes">
+                <input type="radio" name="reciprocating_saw" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -287,7 +296,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="screw_extractor_set" value="yes">
+                <input type="radio" name="screw_extractor_set" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -309,7 +318,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="battery_jump_starter" value="yes">
+                <input type="radio" name="battery_jump_starter" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -331,7 +340,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="job_site_light" value="yes">
+                <input type="radio" name="job_site_light" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -353,7 +362,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="shelving" value="yes">
+                <input type="radio" name="shelving" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -375,7 +384,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="aw_direct_quick_connect" value="yes">
+                <input type="radio" name="aw_direct_quick_connect" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -397,7 +406,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="dewalt_20v_max_xr_compact_reciprocating_saw" value="yes">
+                <input type="radio" name="dewalt_20v_max_xr_compact_reciprocating_saw" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -419,7 +428,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="magic_creeper" value="yes">
+                <input type="radio" name="magic_creeper" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -441,7 +450,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="mechanic_tool_set" value="yes">
+                <input type="radio" name="mechanic_tool_set" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -463,7 +472,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="black_hard_airline_connected_to_trailer" value="yes">
+                <input type="radio" name="black_hard_airline_connected_to_trailer" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -485,7 +494,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="mfg_5_g_gas_can" value="yes">
+                <input type="radio" name="mfg_5_g_gas_can" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -507,7 +516,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="portable_workbench" value="yes">
+                <input type="radio" name="portable_workbench" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -529,7 +538,7 @@
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="extendable_pry_bar" value="yes">
+                <input type="radio" name="extendable_pry_bar" value="yes" checked>
                 <span class="box"></span>
                 Yes
                 </label>
@@ -549,329 +558,579 @@
             <div class="check-item">
             <div class="item-name">2 Securement Straps</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="item_2_securement_straps" value="yes">
+                <input type="radio" name="item_2_securement_straps" value="2" checked>
                 <span class="box"></span>
-                Yes
+                2
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="item_2_securement_straps" value="no">
+                <input type="radio" name="item_2_securement_straps" value="1">
                 <span class="box"></span>
-                No
+                1
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="item_2_securement_straps" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="item_2_securement_straps_notes" placeholder="Notes..." class="notes-box">
             </div>
 
-            <div class="check-item">
-            <div class="item-name">2 Rubber Air Hose - 3/8in x 25ft</div>
+            <details class="drawer-section">
+            <summary>Post-Crash Kit Drawer</summary>
 
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_2_rubber_air_hose_3_8in_x_25ft" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
+            <div class="kit-items">
+                <div class="check-item">
+                <div class="item-name">2 Rubber Air Hose - 3/8in x 25ft</div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_2_rubber_air_hose_3_8in_x_25ft" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_2_rubber_air_hose_3_8in_x_25ft" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="item_2_rubber_air_hose_3_8in_x_25ft_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">Air System Inflator</div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="air_system_inflator" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="air_system_inflator" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="air_system_inflator_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">Air Pressure Guage w/ silver male air fitting</div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="air_pressure_guage_w_silver_male_air_fitting" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="air_pressure_guage_w_silver_male_air_fitting" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="air_pressure_guage_w_silver_male_air_fitting_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">Air Pressure Regulator Valve w/ silver male air fitting</div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="air_pressure_regulator_valve_w_silver_male_air_fitting" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="air_pressure_regulator_valve_w_silver_male_air_fitting" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="air_pressure_regulator_valve_w_silver_male_air_fitting_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">3-Way Quick Coupling Manifold w/ a blue male fitting</div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_3_way_quick_coupling_manifold_w_a_blue_male_fitting" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_3_way_quick_coupling_manifold_w_a_blue_male_fitting" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">2 Glad Hands w/ adapter</div>
+
+                <div class="square-radio-group">
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_2_glad_hands_w_adapter" value="2" checked>
+                    <span class="box"></span>
+                    2
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_2_glad_hands_w_adapter" value="1">
+                    <span class="box"></span>
+                    1
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_2_glad_hands_w_adapter" value="0">
+                    <span class="box"></span>
+                    0
+                    </label>
+                </div>
+                </div>
+
+
+                <input type="text" id="item_2_glad_hands_w_adapter_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">4 Blue Air Fittings (2 male & 2 female)</div>
+
+                <div class="square-radio-group">
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="4" checked>
+                    <span class="box"></span>
+                    4
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="3">
+                    <span class="box"></span>
+                    3
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="2">
+                    <span class="box"></span>
+                    2
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="1">
+                    <span class="box"></span>
+                    1
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="0">
+                    <span class="box"></span>
+                    0
+                    </label>
+                </div>
+                </div>
+
+
+                <input type="text" id="item_4_blue_air_fittings_2_male_2_female_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
+                <div class="check-item">
+                <div class="item-name">
+                    1 Silver Female Air Fitting w/ a brass 1/4 gator bite push to connect air fitting
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting_notes" placeholder="Notes..." class="notes-box">
+                </div>
             </div>
+            </details>
 
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_2_rubber_air_hose_3_8in_x_25ft" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
 
-            <input type="text" id="item_2_rubber_air_hose_3_8in_x_25ft_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">Air System Inflator</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="air_system_inflator" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="air_system_inflator" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="air_system_inflator_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">Air Pressure Guage w/ silver male air fitting</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="air_pressure_guage_w_silver_male_air_fitting" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="air_pressure_guage_w_silver_male_air_fitting" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="air_pressure_guage_w_silver_male_air_fitting_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">Air Pressure Regulator Valve w/ silver male air fitting</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="air_pressure_regulator_valve_w_silver_male_air_fitting" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="air_pressure_regulator_valve_w_silver_male_air_fitting" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="air_pressure_regulator_valve_w_silver_male_air_fitting_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">3-Way Quick Coupling Manifold w/ a blue male fitting</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_3_way_quick_coupling_manifold_w_a_blue_male_fitting" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_3_way_quick_coupling_manifold_w_a_blue_male_fitting" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="item_3_way_quick_coupling_manifold_w_a_blue_male_fitting_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">2 Glad Hands w/ adapter</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_2_glad_hands_w_adapter" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_2_glad_hands_w_adapter" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="item_2_glad_hands_w_adapter_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">4 Blue Air Fittings (2 male & 2 female)</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_4_blue_air_fittings_2_male_2_female" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="item_4_blue_air_fittings_2_male_2_female_notes" placeholder="Notes..." class="notes-box">
-            </div>
-
-            <div class="check-item">
-            <div class="item-name">1 Silver Female Air Fitting w/ a brass 1/4 gator bite push to connect air fitting</div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting" value="yes">
-                <span class="box"></span>
-                Yes
-                </label>
-            </div>
-
-            <div class="square-radio">
-                <label>
-                <input type="radio" name="item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting" value="no">
-                <span class="box"></span>
-                No
-                </label>
-            </div>
-
-            <input type="text" id="item_1_silver_female_air_fitting_w_a_brass_1_4_gator_bite_push_to_connect_air_fitting_notes" placeholder="Notes..." class="notes-box">
-            </div>
 
             <div class="check-item">
             <div class="item-name">Milton 5 in One Universal Quick Connect</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="milton_5_in_one_universal_quick_connect" value="yes">
+                <input type="radio" name="milton_5_in_one_universal_quick_connect" value="2" checked>
                 <span class="box"></span>
-                Yes
+                2
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="milton_5_in_one_universal_quick_connect" value="no">
+                <input type="radio" name="milton_5_in_one_universal_quick_connect" value="1">
                 <span class="box"></span>
-                No
+                1
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="milton_5_in_one_universal_quick_connect" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="milton_5_in_one_universal_quick_connect_notes" placeholder="Notes..." class="notes-box">
             </div>
 
             <div class="check-item">
-            <div class="item-name">10Pcs Pneumatic Cap Style Plug Fitting, Push-to-Connect Air Line Fitting Plug for 1/2, 3/8, 1/4</div>
+            <div class="item-name">
+            10Pcs Pneumatic Cap Style Plug Fitting, Push-to-Connect Air Line Fitting Plug for 1/2, 3/8, 1/4
+            </div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="yes">
+                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="5" checked>
                 <span class="box"></span>
-                Yes
+                5
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="no">
+                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="4">
                 <span class="box"></span>
-                No
+                4
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="3">
+                <span class="box"></span>
+                3
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="2">
+                <span class="box"></span>
+                2
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="1">
+                <span class="box"></span>
+                1
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="item_10pcs_pneumatic_cap_style_plug_fitting_push_to_connect_air_line_fitting_plug_for_1_2_3_8_1_4_notes" placeholder="Notes..." class="notes-box">
             </div>
 
             <div class="check-item">
-            <div class="item-name">PC16-02 Push to Connect Tube Pneumatci Male Straight Fitting</div>
+            <div class="item-name">PC16-02 Push to Connect Tube Pneumatic Male Straight Fitting</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="yes">
+                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="5" checked>
                 <span class="box"></span>
-                Yes
+                5
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="no">
+                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="4">
                 <span class="box"></span>
-                No
+                4
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="3">
+                <span class="box"></span>
+                3
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="2">
+                <span class="box"></span>
+                2
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="1">
+                <span class="box"></span>
+                1
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="pc16_02_push_to_connect_tube_pneumatci_male_straight_fitting_notes" placeholder="Notes..." class="notes-box">
             </div>
 
             <div class="check-item">
-            <div class="item-name">Beduan Push to connect Fitting</div>
+            <div class="item-name">Beduan Push to connect Fitting 5/8</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="beduan_push_to_connect_fitting" value="yes">
+                <input type="radio" name="beduan_push_to_connect_fitting" value="5" checked>
                 <span class="box"></span>
-                Yes
+                5
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="beduan_push_to_connect_fitting" value="no">
+                <input type="radio" name="beduan_push_to_connect_fitting" value="4">
                 <span class="box"></span>
-                No
+                4
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting" value="3">
+                <span class="box"></span>
+                3
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting" value="2">
+                <span class="box"></span>
+                2
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting" value="1">
+                <span class="box"></span>
+                1
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="beduan_push_to_connect_fitting_notes" placeholder="Notes..." class="notes-box">
             </div>
 
+
+
             <div class="check-item">
             <div class="item-name">Uxcell Push to Connect Fittings</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="uxcell_push_to_connect_fittings" value="yes">
+                <input type="radio" name="uxcell_push_to_connect_fittings" value="5" checked>
                 <span class="box"></span>
-                Yes
+                5
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="uxcell_push_to_connect_fittings" value="no">
+                <input type="radio" name="uxcell_push_to_connect_fittings" value="4">
                 <span class="box"></span>
-                No
+                4
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="uxcell_push_to_connect_fittings" value="3">
+                <span class="box"></span>
+                3
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="uxcell_push_to_connect_fittings" value="2">
+                <span class="box"></span>
+                2
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="uxcell_push_to_connect_fittings" value="1">
+                <span class="box"></span>
+                1
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="uxcell_push_to_connect_fittings" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="uxcell_push_to_connect_fittings_notes" placeholder="Notes..." class="notes-box">
             </div>
 
+
             <div class="check-item">
-            <div class="item-name">Beduan Push to connect Fitting</div>
+            <div class="item-name">Beduan Push to connect Fitting 1/4</div>
 
+            <div class="square-radio-group">
             <div class="square-radio">
                 <label>
-                <input type="radio" name="beduan_push_to_connect_fitting_2" value="yes">
+                <input type="radio" name="beduan_push_to_connect_fitting_2" value="5" checked>
                 <span class="box"></span>
-                Yes
+                5
                 </label>
             </div>
 
             <div class="square-radio">
                 <label>
-                <input type="radio" name="beduan_push_to_connect_fitting_2" value="no">
+                <input type="radio" name="beduan_push_to_connect_fitting_2" value="4">
                 <span class="box"></span>
-                No
+                4
                 </label>
             </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting_2" value="3">
+                <span class="box"></span>
+                3
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting_2" value="2">
+                <span class="box"></span>
+                2
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting_2" value="1">
+                <span class="box"></span>
+                1
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="beduan_push_to_connect_fitting_2" value="0">
+                <span class="box"></span>
+                0
+                </label>
+            </div>
+            </div>
+
 
             <input type="text" id="beduan_push_to_connect_fitting_2_notes" placeholder="Notes..." class="notes-box">
             </div>

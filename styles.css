@@ -164,3 +164,42 @@ footer { /* Footer styling */
   padding: 6px;
   margin-top: 6px;
 }
+
+.square-radio-group {
+  display: flex;
+  gap: 10px;          /* space between 1–5 options */
+}
+
+.square-radio {
+  /* keeps each label as a small block in the row */
+}
+
+.drawer-section {
+  margin: 10px 0;
+}
+
+
+.drawer-section > summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 0;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  text-decoration: underline;;
+}
+
+.drawer-section > summary:hover {
+  color: yellow;   /* highlight on hover */
+}
+
+
+.drawer-section[open] > summary {
+  text-decoration: underline;
+  color: #fff9a3;
+}
+
+.kit-items {
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 10px;
+}
