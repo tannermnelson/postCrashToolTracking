@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	trooperChoices.enable();
-	
+
 	//Create and add spinner to the page
     const spinner = document.createElement('div');
     spinner.id = 'spinner';
@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					const name = trooper.trooper?.trim();
 					if (name) {
 						trooperChoicesArray.push({ value: name, label: name });
-						trooperEmailMap[name] = trooper.email;
+						trooperEmailMap[name] = trooper.e_mail;
 						const emailOption = document.createElement('option');
-						emailOption.value = trooper.email;
-						emailOption.textContent = trooper.email;
+						emailOption.value = trooper.e_mail;
+						emailOption.textContent = trooper.e_mail;
 						emailSelect.appendChild(emailOption);
 					}
 				});
