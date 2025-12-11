@@ -13,6 +13,14 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+.readonly-field {
+    background-color: #555;
+    color: #aaa;
+    cursor: not-allowed;
+    border: 1px solid #777;
+    opacity: 1; /* Override browser dimming on disabled elements */
+}
+
 .banner h1 {
     margin: 0;
     color: #121212;
@@ -202,4 +210,88 @@ footer { /* Footer styling */
   border: 2px solid #333;
   border-radius: 4px;
   padding: 10px;
+}
+
+/* ======================= */
+/*      CHOICES DROPDOWN STYLES      */
+/* ======================= */
+
+.choices { /* Base choices field wrapper */
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0px !important;
+  background: none !important;
+  margin-top: 6px !important;
+  margin-bottom: 24px !important;
+}
+
+.choices__inner { /* Inner field styling */
+  min-height: 35px !important;
+  line-height: 1.2 !important;
+  padding: 3px 8px !important;
+  background-color: #333333 !important;
+  border: 1px solid #DDDDDD !important;
+  border-radius: 5px !important;
+  color: white !important;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.choices__inner .choices__item { /* Items inside field */
+  color: white !important;
+  opacity: 1 !important;
+  font-size: 0.8rem !important;
+  line-height: 1 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline !important;
+}
+
+.choices__input { /* Input inside field */
+  margin-left: 2px !important;
+  height: 35px !important;
+  padding: 2px 8px !important;
+  font-size: 0.8rem !important;
+  background-color: #333333 !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.choices__list--dropdown { /* Dropdown menu */
+  background-color: #333333 !important;
+  color: white !important;
+  border: 1px solid white !important;
+  box-sizing: border-box;
+  max-height: 450px !important;   /* allow ~12–15 visible rows */
+  overflow-y: auto !important;    /* allow scrolling if needed */
+  scroll-behavior: smooth;
+}
+
+.choices__item--selectable { /* List items */
+  padding: 2px 10px !important;
+  font-size: 0.8rem !important;
+  line-height: 1.3;
+}
+
+.choices__item--selectable.is-highlighted { /* Highlighted item */
+  background-color: #F8B420 !important;
+  color: black !important;
+}
+
+.choices__list--dropdown::before { /* Optional search prompt */
+  content: "Search..." !important;
+  display: block;
+  padding: 6px 12px;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* Style for disabled Choices.js dropdown */
+.choices.is-disabled .choices__inner {
+    background-color: #555 !important;
+    cursor: not-allowed;
+    border-color: #777 !important; /* Match the readonly-field border */
 }
