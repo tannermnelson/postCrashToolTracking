@@ -38,42 +38,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	fetch('https://ckmzl9qyfj.execute-api.us-east-1.amazonaws.com/getTrooperList')
-	.then(response => response.json())
-	.then(data => {
-		
-		const trooperEmailMap = {};
-		const emailSelect = document.getElementById('email');
+		.then(response => response.json())
+		.then(data => {
 
-		if (data.troopers?.length > 0) {
-			const trooperChoicesArray = [];
+			const trooperEmailMap = {};
+			const emailSelect = document.getElementById('email');
 
-			data.troopers.forEach(trooper => {
-				const name = trooper.trooper?.trim();
-				if (name) {
-					trooperChoicesArray.push({ value: name, label: name });
-					trooperEmailMap[name] = trooper.email;
-					const emailOption = document.createElement('option');
-					emailOption.value = trooper.email;
-					emailOption.textContent = trooper.email;
-					emailSelect.appendChild(emailOption);
-				}
+			if (data.troopers?.length > 0) {
+				const trooperChoicesArray = [];
+
+				data.troopers.forEach(trooper => {
+					const name = trooper.trooper?.trim();
+					if (name) {
+						trooperChoicesArray.push({ value: name, label: name });
+						trooperEmailMap[name] = trooper.email;
+						const emailOption = document.createElement('option');
+						emailOption.value = trooper.email;
+						emailOption.textContent = trooper.email;
+						emailSelect.appendChild(emailOption);
+					}
+				});
+
+				trooperChoices.setChoices(trooperChoicesArray.sort((a, b) => a.label.localeCompare(b.label)), 'value', 'label', true);
+
+				document.getElementById('operator').addEventListener('change', (event) => {
+					const selectedTrooper = event.target.value;
+					document.getElementById('email').value = trooperEmailMap[selectedTrooper] || '';
+				});
+			}
+		})
+		.catch(error => {
+			console.error('Error fetching trooper list:', error);
+			document.querySelectorAll('#trooper').forEach(select => {
+				select.innerHTML = '<option value="">Error loading trooper list</option>';
 			});
-
-			trooperChoices.setChoices(trooperChoicesArray.sort((a, b) => a.label.localeCompare(b.label)), 'value', 'label', true);
-
-			document.getElementById('operator').addEventListener('change', (event) => {
-				const selectedTrooper = event.target.value;
-				document.getElementById('email').value = trooperEmailMap[selectedTrooper] || '';
-			});
-		}
-	})
-	.catch(error => {
-		console.error('Error fetching trooper list:', error);
-		document.querySelectorAll('#trooper').forEach(select => {
-			seleect.innerHTML = '<option value="">Error loading trooper list</option>';
+			document.getElementById('email').value = '';
 		});
-		document.getElementById('email').value = '';
-	});
 
 
 
