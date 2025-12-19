@@ -295,3 +295,9 @@ footer { /* Footer styling */
     cursor: not-allowed;
     border-color: #777 !important; /* Match the readonly-field border */
 }
+
+.serial-line {
+  margin-top: 4px;
+  font-size: 0.9em;
+  opacity: 0.85;
+}

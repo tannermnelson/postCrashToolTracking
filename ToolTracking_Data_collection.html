@@ -86,7 +86,10 @@
             </div>
 
             <div class="check-item">
-            <div class="item-name">Stationary Air Compressor</div>
+            <div class="item-name">
+                Stationary Air Compressor
+                <div class="serial-line" id="stationary_air_compressor_serial"></div>
+            </div>
 
             <div class="square-radio">
                 <label>
@@ -104,8 +107,43 @@
                 </label>
             </div>
 
-            <input type="text" id="stationary_air_compressor_notes" placeholder="Notes..." class="notes-box">
+            <input type="text"
+                    id="stationary_air_compressor_notes"
+                    name="stationary_air_compressor_notes"
+                    placeholder="Notes..."
+                    class="notes-box">
             </div>
+
+
+            <div class="check-item">
+            <div class="item-name">
+                Generator
+                <div class="serial-line" id="generator_serial"></div>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="generator" value="yes" checked>
+                <span class="box"></span>
+                Yes
+                </label>
+            </div>
+
+            <div class="square-radio">
+                <label>
+                <input type="radio" name="generator" value="no">
+                <span class="box"></span>
+                No
+                </label>
+            </div>
+
+            <input type="text"
+                    id="generator_notes"
+                    name="generator_notes"
+                    placeholder="Notes..."
+                    class="notes-box">
+            </div>
+
 
             <div class="check-item">
             <div class="item-name">Filter-Regulator</div>
@@ -638,6 +676,29 @@
 
                 <input type="text" id="air_system_inflator_notes" placeholder="Notes..." class="notes-box">
                 </div>
+
+                <div class="check-item">
+                <div class="item-name">Rubber Air Hose - 3/8in by 3ft</div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="rubber_air_hose_3_8in_by_3ft" value="yes" checked>
+                    <span class="box"></span>
+                    Yes
+                    </label>
+                </div>
+
+                <div class="square-radio">
+                    <label>
+                    <input type="radio" name="rubber_air_hose_3_8in_by_3ft" value="no">
+                    <span class="box"></span>
+                    No
+                    </label>
+                </div>
+
+                <input type="text" id="rubber_air_hose_3_8in_by_3ft_notes" placeholder="Notes..." class="notes-box">
+                </div>
+
 
                 <div class="check-item">
                 <div class="item-name">Air Pressure Guage w/ silver male air fitting</div>

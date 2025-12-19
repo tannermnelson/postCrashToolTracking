@@ -10,7 +10,33 @@ document.addEventListener('DOMContentLoaded', function() {
 		searchResultLimit: 9999
 	});
 
+	// ✅ Paste serial-map code HERE
+	const serialMap = {
+		A: { generator: "3010896746", compressor: "CBV902994" },
+		B: { generator: "3010896747", compressor: "CBV923131" },
+		C: { generator: "3010896744", compressor: "CBV923130" },
+		D: { generator: "3010896750", compressor: "CBV900871" },
+		E: { generator: "3010896760", compressor: "CBV902993" },
+		F: { generator: "3010896749", compressor: "CBV900868" },
+		G: { generator: "3010896740", compressor: "CBV918141" },
+		H: { generator: "3010896743", compressor: "CBV900873" },
+	};
 
+	const trailerSelect = document.getElementById("trailer_id");
+	const genEl = document.getElementById("generator_serial");
+	const compEl = document.getElementById("stationary_air_compressor_serial");
+
+	function updateSerials() {
+		const trailer = trailerSelect?.value?.trim();
+		const data = serialMap[trailer];
+
+		if (genEl) genEl.textContent = data?.generator ? `Serial #: ${data.generator}` : "";
+		if (compEl) compEl.textContent = data?.compressor ? `Serial #: ${data.compressor}` : "";
+	}
+
+	if (trailerSelect) trailerSelect.addEventListener("change", updateSerials);
+	updateSerials();
+	
 	trooperChoices.enable();
 
 	//Create and add spinner to the page
@@ -99,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		const stationary_air_compressor = getRadioValue('stationary_air_compressor');
 		const stationary_air_compressor_notes = document.getElementById('stationary_air_compressor_notes').value;
 
+		const generator = getRadioValue('generator');
+		const generator_notes = document.getElementById('generator_notes').value;	
+
 		const filter_regulator = getRadioValue('filter_regulator');
 		const filter_regulator_notes = document.getElementById('filter_regulator_notes').value;
 
@@ -175,6 +204,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		const air_system_inflator = getRadioValue('air_system_inflator');
 		const air_system_inflator_notes = document.getElementById('air_system_inflator_notes').value;
 
+		const rubber_air_hose_3_8in_by_3ft = getRadioValue('rubber_air_hose_3_8in_by_3ft');
+		const rubber_air_hose_3_8in_by_3ft_notes =
+		document.getElementById('rubber_air_hose_3_8in_by_3ft_notes').value;
+
 		const air_pressure_guage_w_silver_male_air_fitting =
 		getRadioValue('air_pressure_guage_w_silver_male_air_fitting');
 		const air_pressure_guage_w_silver_male_air_fitting_notes =
@@ -244,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		!email ||
 		!rolling_tool_cabinet ||
 		!stationary_air_compressor ||
+		!generator ||
 		!filter_regulator ||
 		!rand_impact_wrench_d_handle ||
 		!truck_axle_jack ||
@@ -267,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		!item_2_securement_straps ||
 		!item_2_rubber_air_hose_3_8in_x_25ft ||
 		!air_system_inflator ||
+		!rubber_air_hose_3_8in_by_3ft ||
 		!air_pressure_guage_w_silver_male_air_fitting ||
 		!air_pressure_regulator_valve_w_silver_male_air_fitting ||
 		!item_3_way_quick_coupling_manifold_w_a_blue_male_fitting ||
@@ -304,6 +339,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		rolling_tool_cabinet_notes,
 		stationary_air_compressor,
 		stationary_air_compressor_notes,
+		generator,
+		generator_notes,
 		filter_regulator,
 		filter_regulator_notes,
 		rand_impact_wrench_d_handle,
@@ -350,6 +387,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		item_2_rubber_air_hose_3_8in_x_25ft_notes,
 		air_system_inflator,
 		air_system_inflator_notes,
+		rubber_air_hose_3_8in_by_3ft,
+		rubber_air_hose_3_8in_by_3ft_notes,
 		air_pressure_guage_w_silver_male_air_fitting,
 		air_pressure_guage_w_silver_male_air_fitting_notes,
 		air_pressure_regulator_valve_w_silver_male_air_fitting,
